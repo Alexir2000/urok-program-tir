@@ -13,8 +13,8 @@ icon = pygame.image.load("img/icon.png")
 pygame.display.set_icon(icon)
 
 targer_img = pygame.image.load("img/target_img.png")
-targer_width = 50
-targer_height = 50
+targer_width = 80
+targer_height = 80
 
 target_x = random.randint(0,SCREEN_WIDTH - targer_width)
 target_y = random.randint(0,SCREEN_HEIGHT - targer_height)
