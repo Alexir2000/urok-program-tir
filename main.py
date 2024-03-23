@@ -38,8 +38,13 @@ running = True
 k_pokaz = 0
 k_popal = 0
 
+# инициализация
+screen.fill(color)
+display_text()
+screen.blit(target_img, (target_x, target_y))
+pygame.display.update()
+
 while running:
-    screen.fill(color)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -50,11 +55,10 @@ while running:
                 target_x = random.randint(0, SCREEN_WIDTH - target_width)
                 target_y = random.randint(0, SCREEN_HEIGHT - target_height)
                 k_popal += 1
-
-
-    display_text()
-    screen.blit(target_img, (target_x, target_y))
-    pygame.display.update()
+        screen.fill(color)
+        display_text()
+        screen.blit(target_img, (target_x, target_y))
+        pygame.display.update()
 
 pygame.quit()
 
